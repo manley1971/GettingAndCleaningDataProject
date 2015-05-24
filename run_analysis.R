@@ -92,10 +92,16 @@ extract_means_from_test_and_training_set<-function(datadir,datasetdir,testandtra
         meanAndStdVector<-grepl("mean\\(\\)|std\\(\\)|subject|activity",ignore.case=FALSE,allLabels$V2)
 
         # t meaning time wasn't obvious to me, especially what a "tbody" or "tgravity" or "fbody" was so I will
-        # spell it out. I left "std" since I know what that means 
+        # spell it out. I left the "BodyBody" and "bodybody" since I do not know anything better.
+        # Similar logic in leaving "Jerk" as "jerk"
+        # I left "std" since I know what that means I suspect people do in general.
         allLabels$V2<-gsub("tBody","timebody",allLabels$V2)
         allLabels$V2<-gsub("tGravity","timegravity",allLabels$V2)
         allLabels$V2<-gsub("fBody","frequencyBody",allLabels$V2)
+        allLabels$V2<-gsub("Body","body",allLabels$V2)
+        allLabels$V2<-gsub("BodyBody","bodybody",allLabels$V2)
+        allLabels$V2<-gsub("Jerk","jerk",allLabels$V2)
+        
         
         
         #I do not believe that the parens add anything to the information given. This is a personal preference.
@@ -107,7 +113,7 @@ extract_means_from_test_and_training_set<-function(datadir,datasetdir,testandtra
         #from the readme, I believe that the Gyro means gyroscope which I think needs to be written out.
         allLabels$V2<-gsub("Gyro","gyroscope",allLabels$V2)
         
-        #also, I think Mag means magnitude, so I'm changing that too
+        #Mag is magnitude. Not obvious.
         allLabels$V2<-gsub("Mag","magnitude",allLabels$V2)
         
         #all of the dashes make things less readable. The first lecture of the fourth week agrees.
@@ -191,5 +197,5 @@ run_analysis<-function()
 
 }
 
-
+run_analysis()
 

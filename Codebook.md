@@ -1,4 +1,8 @@
+Codebook for Coursera Getting and Cleaning Data Project
+==========
 
+Submitted by: Dave Manley
+On: 5/23/2015
 
 The features selected for this database originally come from the adomain of wearable computing. For more information see: http://www.insideactivitytracking.com/data-science-activity-tracking-and-the-battle-for-the-worlds-top-sports-brand/.
 
@@ -14,16 +18,19 @@ The processing of the data was according to the script in this directory and wen
 
 Tidy data was defined according to the paper: http://vita.had.co.nz/papers/tidy-data.pdf
 
+
+##DECISIONS
+
 The following decisions where made on rnaming the data:
- - # t meaning time wasn't obvious to me, especially what a "tbody" or "tgravity" or "fbody" was so I will spell it out. I left "std" since I know what that means 
+ -  #for the most part lower cases were removed except where it was needed for readability.
+ -  #t meaning time wasn't obvious to me, especially what a "tbody" or "tgravity" or "fbody" was so I will spell it out. I left "std" since I know what that means and I suspect "std" means more to the average person than it in long form
  -  #I do not believe that the parens add anything to the information given. This is a personal preference but also based on class lectures.
- -  #from the readme, I believe that the Acc means accelerometer which I think needs to be written out.
  -  #from the readme, I believe that the Acc means accelerometer which I think needs to be written out.
  -  # I think Mag means magnitude, so I'm changing that too
 
-The decision was that mean is different than meanFreq, and since there was not a standard deviation for those variables they were not selected.
+**The decision was that mean is different than meanFreq, and since there was not a standard deviation for those variables they were not selected.**
 
-Also: capitals for XYZ and "Body" were left in for readability reasons.
+Also: capitals for XYZ were left in for readability reasons.
 
 As a result, this data first came from readings of accelerometer and :w 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
@@ -81,70 +88,40 @@ tBodyGyroMean
 tBodyGyroJerkMean
 Of course, for the assignment the features were renamed and cleaned.
 
-Here is a list of the data:
--timebodyaccelerometermeanX (dbl) 
--timebodyaccelerometermeanY (dbl)
--timebodyaccelerometermeanZ (dbl)
--timebodyaccelerometerstdX (dbl)
--timebodyaccelerometerstdY (dbl)
--timebodyaccelerometerstdZ (dbl)
--timegravityaccelerometermeanX (dbl)
--timegravityaccelerometermeanY (dbl)
--timegravityaccelerometermeanZ (dbl)
--timegravityaccelerometerstdX (dbl)
--timegravityaccelerometerstdY (dbl)
--timegravityaccelerometerstdZ (dbl)
--timebodyaccelerometerJerkmeanX (dbl)
--timebodyaccelerometerJerkmeanY (dbl)
--timebodyaccelerometerJerkmeanZ (dbl)
--timebodyaccelerometerJerkstdX (dbl)
--timebodyaccelerometerJerkstdY (dbl)
--timebodyaccelerometerJerkstdZ (dbl)
--timebodygyroscopemeanX (dbl)
--timebodygyroscopemeanY (dbl)
--timebodygyroscopemeanZ (dbl)
--timebodygyroscopestdX (dbl)
--timebodygyroscopestdY (dbl)
--timebodygyroscopestdZ (dbl)
--timebodygyroscopeJerkmeanX (dbl)
--timebodygyroscopeJerkmeanY (dbl)
--timebodygyroscopeJerkmeanZ (dbl)
--timebodygyroscopeJerkstdX (dbl)
--timebodygyroscopeJerkstdY (dbl)
--timebodygyroscopeJerkstdZ (dbl)
--timebodyaccelerometermagnitudemean (dbl)
--timebodyaccelerometermagnitudestd (dbl)
--timegravityaccelerometermagnitudemean (dbl)
--timegravityaccelerometermagnitudestd (dbl),
--timebodyaccelerometerJerkmagnitudemean (dbl)
--timebodyaccelerometerJerkmagnitudestd (dbl)
--timebodygyroscopemagnitudemean (dbl)
--timebodygyroscopemagnitudestd (dbl)
--timebodygyroscopeJerkmagnitudemean (dbl)
--timebodygyroscopeJerkmagnitudestd (dbl)
--frequencyBodyaccelerometermeanX (dbl)
--frequencyBodyaccelerometermeanY (dbl)
--frequencyBodyaccelerometermeanZ (dbl)
--frequencyBodyaccelerometerstdX (dbl)
--frequencyBodyaccelerometerstdY (dbl)
--frequencyBodyaccelerometerstdZ (dbl),
--frequencyBodyaccelerometerJerkmeanX (dbl)
--frequencyBodyaccelerometerJerkmeanY (dbl)
--frequencyBodyaccelerometerJerkmeanZ (dbl)
--frequencyBodyaccelerometerJerkstdX (dbl)
--frequencyBodyaccelerometerJerkstdY (dbl)
--frequencyBodyaccelerometerJerkstdZ (dbl)
--frequencyBodygyroscopemeanX (dbl)
--frequencyBodygyroscopemeanY (dbl)
--frequencyBodygyroscopemeanZ (dbl)
--frequencyBodygyroscopestdX (dbl)
--frequencyBodygyroscopestdY (dbl)
--frequencyBodygyroscopestdZ (dbl)
--frequencyBodyaccelerometermagnitudemean (dbl)
--frequencyBodyaccelerometermagnitudestd (dbl)
--frequencyBodyBodyaccelerometerJerkmagnitudemean (dbl)
--frequencyBodyBodyaccelerometerJerkmagnitudestd (dbl)
--frequencyBodyBodygyroscopemagnitudemean (dbl)
--frequencyBodyBodygyroscopemagnitudestd (dbl) 
--frequencyBodyBodygyroscopeJerkmagnitudemean (dbl)
--frequencyBodyBodygyroscopeJerkmagnitudestd (dbl)
+Here is a list of the data that was cleaned:
+ [1] "subject"                                         "activity"                                       
+ [3] "timebodyaccelerometermeanX"                      "timebodyaccelerometermeanY"                     
+ [5] "timebodyaccelerometermeanZ"                      "timebodyaccelerometerstdX"                      
+ [7] "timebodyaccelerometerstdY"                       "timebodyaccelerometerstdZ"                      
+ [9] "timegravityaccelerometermeanX"                   "timegravityaccelerometermeanY"                  
+[11] "timegravityaccelerometermeanZ"                   "timegravityaccelerometerstdX"                   
+[13] "timegravityaccelerometerstdY"                    "timegravityaccelerometerstdZ"                   
+[15] "timebodyaccelerometerjerkmeanX"                  "timebodyaccelerometerjerkmeanY"                 
+[17] "timebodyaccelerometerjerkmeanZ"                  "timebodyaccelerometerjerkstdX"                  
+[19] "timebodyaccelerometerjerkstdY"                   "timebodyaccelerometerjerkstdZ"                  
+[21] "timebodygyroscopemeanX"                          "timebodygyroscopemeanY"                         
+[23] "timebodygyroscopemeanZ"                          "timebodygyroscopestdX"                          
+[25] "timebodygyroscopestdY"                           "timebodygyroscopestdZ"                          
+[27] "timebodygyroscopejerkmeanX"                      "timebodygyroscopejerkmeanY"                     
+[29] "timebodygyroscopejerkmeanZ"                      "timebodygyroscopejerkstdX"                      
+[31] "timebodygyroscopejerkstdY"                       "timebodygyroscopejerkstdZ"                      
+[33] "timebodyaccelerometermagnitudemean"              "timebodyaccelerometermagnitudestd"              
+[35] "timegravityaccelerometermagnitudemean"           "timegravityaccelerometermagnitudestd"           
+[37] "timebodyaccelerometerjerkmagnitudemean"          "timebodyaccelerometerjerkmagnitudestd"          
+[39] "timebodygyroscopemagnitudemean"                  "timebodygyroscopemagnitudestd"                  
+[41] "timebodygyroscopejerkmagnitudemean"              "timebodygyroscopejerkmagnitudestd"              
+[43] "frequencybodyaccelerometermeanX"                 "frequencybodyaccelerometermeanY"                
+[45] "frequencybodyaccelerometermeanZ"                 "frequencybodyaccelerometerstdX"                 
+[47] "frequencybodyaccelerometerstdY"                  "frequencybodyaccelerometerstdZ"                 
+[49] "frequencybodyaccelerometerjerkmeanX"             "frequencybodyaccelerometerjerkmeanY"            
+[51] "frequencybodyaccelerometerjerkmeanZ"             "frequencybodyaccelerometerjerkstdX"             
+[53] "frequencybodyaccelerometerjerkstdY"              "frequencybodyaccelerometerjerkstdZ"             
+[55] "frequencybodygyroscopemeanX"                     "frequencybodygyroscopemeanY"                    
+[57] "frequencybodygyroscopemeanZ"                     "frequencybodygyroscopestdX"                     
+[59] "frequencybodygyroscopestdY"                      "frequencybodygyroscopestdZ"                     
+[61] "frequencybodyaccelerometermagnitudemean"         "frequencybodyaccelerometermagnitudestd"         
+[63] "frequencybodybodyaccelerometerjerkmagnitudemean" "frequencybodybodyaccelerometerjerkmagnitudestd" 
+[65] "frequencybodybodygyroscopemagnitudemean"         "frequencybodybodygyroscopemagnitudestd"         
+[67] "frequencybodybodygyroscopejerkmagnitudemean"     "frequencybodybodygyroscopejerkmagnitudestd"    
+
+See the UCI Dataset for more information, but these variable names all come from there.
