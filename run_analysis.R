@@ -188,7 +188,7 @@ run_analysis<-function()
         meanandstdSetWithActivityNames<-change_activity_names(datadir,datasetdir,meanandstdSet)
         tidydata<-calculate_means_by_subject_and_activity(meanandstdSetWithActivityNames)
         write.table(tidydata, "DataCleaningFile.txt", row.name=FALSE)
-        tdata<-read.table("dataCleaningFile.txt", row.name=FALSE)
+
 }
 
 
